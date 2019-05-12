@@ -6,7 +6,7 @@
 
 ## Learning Algorithm
 
-To solve this project I utilized the Deep Deterministic Policy Gradients algorithm from the Pendulum exercise solution (https://github.com/udacity/deep-reinforcement-learning/blob/master/ddpg-pendulum/). I modified the definition of the function `ddpg` in `DDPG.ipynb` to interact with the Reacher environment (v2, multiple arms), modified `ddpg_agent.py` to work with multiple reachers simulateously, and increased the depth of the neural network in `model.py`. After those adjustments, I began tuning the hyperparameters until the agent was able to reach the desired performance.
+To solve this project I utilized the Deep Deterministic Policy Gradients algorithm from the instructor's solution for the OpenAI Gym's Pendulum environment (https://github.com/udacity/deep-reinforcement-learning/blob/master/ddpg-pendulum/). I modified the definition of the function `ddpg` in `DDPG.ipynb` to interact with the Reacher environment (v2, multiple arms), modified `ddpg_agent.py` to work with multiple reachers simulateously, and increased the depth of the neural network in `model.py`. After those adjustments, I began tuning the hyperparameters until the agent was able to reach the desired performance.
 
 ### Hyperparameters
 
@@ -50,7 +50,7 @@ Same as the Actor, but with a single output node with a linear activation functi
 
 ![Rewards Plot][image1]
 
-The average score, across 100 episodes and 20 reachers, exceeded 30 after 1600 episodes.
+The average score, across 100 episodes and 20 reachers, exceeded 30 after 1575 episodes. This is slightly misleading, because the performance goal had not actually been achieved at 1475 episodes, as indicated in the Jupyter Notebook, but was actually accomplished at the transition from 700-step runs to 1000-step runs after 1500 episodes, at which time the average score increased to well over 30. The single final demo run of the 20 Reachers actually scored an average over 39.
 
 ## Ideas for Future Work
 
