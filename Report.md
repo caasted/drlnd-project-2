@@ -8,7 +8,7 @@
 
 To solve this project I utilized the Deep Deterministic Policy Gradients algorithm from the instructor's solution for the OpenAI Gym's Pendulum environment (https://github.com/udacity/deep-reinforcement-learning/blob/master/ddpg-pendulum/). I modified the definition of the function `ddpg` in `DDPG.ipynb` to interact with the Reacher environment (v2, multiple arms), modified `ddpg_agent.py` to work with multiple reachers simulateously, and increased the depth of the neural network in `model.py`. After those adjustments, I began tuning the hyperparameters until the agent was able to reach the desired performance.
 
-### DDPG
+### Deep Deterministic Policy Gradients (DDPG)
 
 The DDPG algorithm is an actor-critic method that utilizes four neural networks. The first neural network, the actor, learns to select the optimal action for a given set of state variables, while the second neural network, the critic, learns to estimate the value of the current state of the environment. The third and fourth networks are copies of the first two and lag behind the primary networks through the use of a soft update process. These copies are used for the target values in the reinforcement learning update step, which helps make the learning process more stable.
 
